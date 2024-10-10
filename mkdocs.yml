@@ -1,0 +1,4 @@
+site_name: Guía de usuario APP
+nav:
+  - Inicio: index.md
+  - Sobre Nosotros: about.md
