@@ -12,6 +12,8 @@
       
       
       
+        <link rel="next" href="P2.2/">
+      
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
@@ -287,6 +289,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="P2.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.2 – Autenticación en Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -376,46 +398,46 @@
 <h1 id="practica-21-instalacion-y-configuracion-de-servidor-web-nginx">Práctica 2.1 – Instalación y configuración de servidor web Nginx</h1>
 <h2 id="instalacion-servidor-web-nginx">Instalación servidor web Nginx</h2>
 <p>Para instalar el servidor nginx en nuestra Debian, primero actualizamos los repositorios y después instalamos el paquete correspondiente:</p>
-<p><img alt="img1" src="assets/images/img1.png" />
-<img alt="img2" src="assets/images/img2.png" /></p>
+<p><img alt="img1" src="assets/images/p2.1/img1.png" />
+<img alt="img2" src="assets/images/p2.1/img2.png" /></p>
 <p>Comprobamos que nginx se ha instalado y que está funcionando correctamente:</p>
-<p><img alt="img3" src="assets/images/img3.png" /></p>
+<p><img alt="img3" src="assets/images/p2.1/img3.png" /></p>
 <h2 id="creacion-de-las-carpeta-del-sitio-web">Creación de las carpeta del sitio web</h2>
 <p>Todos los archivos que forman parte de un sitio web que servirá nginx se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code></p>
 <p>Así que, vamos a crear la carpeta de nuestro sitio web o dominio:</p>
-<p><img alt="img4" src="assets/images/img4.png" /></p>
+<p><img alt="img4" src="assets/images/p2.1/img4.png" /></p>
 <p>Dentro de esa carpeta html, debéis clonar el siguiente repositorio</p>
-<p><img alt="img5" src="assets/images/img5.png" /></p>
+<p><img alt="img5" src="assets/images/p2.1/img5.png" /></p>
 <p>Además, haremos que el propietario de esta carpeta y todo lo que haya dentro sea el usuario www-data, típicamente el usuario del servicio web.</p>
-<p><img alt="img6" src="assets/images/img6.png" />
+<p><img alt="img6" src="assets/images/p2.1/img6.png" />
 Para comprobar que el servidor está funcionando y sirviendo páginas correctamente, podéis acceder desde vuestro cliente a con la dirección IP de la máquina virtual
-<img alt="img7" src="assets/images/img7.png" />
-<img alt="img8" src="assets/images/img8.png" /></p>
+<img alt="img7" src="assets/images/p2.1/img7.png" />
+<img alt="img8" src="assets/images/p2.1/img8.png" /></p>
 <h2 id="configuracion-de-servidor-web-nginx">Configuración de servidor web NGINX</h2>
 <p>En <code>/etc/nginx/sites-available/a23momuga.github.io</code> insertamos el siguiente contenido
-<img alt="img9" src="assets/images/img9.png" />
+<img alt="img9" src="assets/images/p2.1/img9.png" />
 Y crearemos un archivo simbólico entre este archivo y el de sitios que están habilitados, para que se dé de alta automáticamente.
-<img alt="img10" src="assets/images/img10.png" /></p>
+<img alt="img10" src="assets/images/p2.1/img10.png" /></p>
 <h2 id="comprobaciones">Comprobaciones</h2>
 <p>Editamos el archivo <code>/etc/hosts</code> de nuestra máquina anfitriona para que asocie la IP de la máquina virtual, a nuestro <code>server_name</code>.
-<img alt="img11" src="assets/images/img11.png" /></p>
+<img alt="img11" src="assets/images/p2.1/img11.png" /></p>
 <p>Usando el siguiente comando podemos ver cada solicitud a su servidor web se registra en este archivo de registro
-<img alt="img12" src="assets/images/img12.png" /></p>
+<img alt="img12" src="assets/images/p2.1/img12.png" /></p>
 <h2 id="configurar-servidor-sftp-en-debian">Configurar servidor SFTP en Debian</h2>
 <p>En primer lugar, lo instalaremos desde los repositorios:
-<img alt="img13" src="assets/images/img13.png" />
+<img alt="img13" src="assets/images/p2.1/img13.png" />
 Ahora vamos a crear una carpeta en nuestro home en Debian:
-<img alt="img14" src="assets/images/img14.png" /></p>
+<img alt="img14" src="assets/images/p2.1/img14.png" /></p>
 <p>Ahora vamos a crear los certificados de seguridad necesarios para aportar la capa de cifrado a nuestra conexión
-<img alt="img15" src="assets/images/img15.png" /></p>
+<img alt="img15" src="assets/images/p2.1/img15.png" /></p>
 <p>Y una vez realizados estos pasos, procedemos a realizar la configuración de vsftpd propiamente dicha, buscaremos las siguientes líneas del archivo y las eliminaremos por completo</p>
-<p><img alt="img16" src="assets/images/img16.png" /></p>
+<p><img alt="img16" src="assets/images/p2.1/img16.png" /></p>
 <p>Tras ello, añadiremos estas líneas en su lugar
-<img alt="img17" src="assets/images/img17.png" /></p>
+<img alt="img17" src="assets/images/p2.1/img17.png" /></p>
 <p>Y, tras guardar los cambios, reiniciamos el servicio para que coja la nueva configuración:
-<img alt="img18" src="assets/images/img18.png" /></p>
+<img alt="img18" src="assets/images/p2.1/img18.png" /></p>
 <p>Y ya podremos usar ftp con el servidor nginx (Puerto 21 para ftp y Puerto 22 para sftp)</p>
-<p><img alt="img19" src="assets/images/img19.png" /></p>
+<p><img alt="img19" src="assets/images/p2.1/img19.png" /></p>
 
 
 
