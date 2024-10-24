@@ -8,19 +8,23 @@
       
       
       
+        <link rel="canonical" href="https://a23momuga.github.io/P2.3/">
+      
+      
+        <link rel="prev" href="../P2.2/">
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>Gabriel Moreno</title>
+        <title>Práctica 2.3 – Proxy inverso con Nginx - Gabriel Moreno</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#practica-23-proxy-inverso-con-nginx" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Gabriel Moreno" class="md-header__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
+    <a href=".." title="Gabriel Moreno" class="md-header__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Práctica 2.3 – Proxy inverso con Nginx
             
           </span>
         </div>
@@ -164,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Gabriel Moreno" class="md-nav__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
+    <a href=".." title="Gabriel Moreno" class="md-nav__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -182,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -202,7 +211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/P2.2/" class="md-nav__link">
+      <a href="../P2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -219,10 +228,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/P2.3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Práctica 2.3 – Proxy inverso con Nginx
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -231,6 +260,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx servidor web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx proxy inverso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadiendo-cabeceras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadiendo cabeceras
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -252,6 +337,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx servidor web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx proxy inverso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadiendo-cabeceras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadiendo cabeceras
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -263,8 +394,77 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="practica-23-proxy-inverso-con-nginx">Práctica 2.3 – Proxy inverso con Nginx</h1>
+<h2 id="nginx-servidor-web">Nginx servidor web</h2>
+<p>Vamos a configurar dos Debian con sendos servidores Nginx. Tenéis la máquina virtual inicial y debéis clonarla para tener una segunda:</p>
+<ul>
+<li>
+<p>Uno servirá las páginas web que ya hemos configurado, así pues utilizaremos el servidor que ya tenemos configurado de la Práctica 2.1.</p>
+</li>
+<li>
+<p>El nuevo servidor clon Debian con Nginx configurado como proxy inverso</p>
+</li>
+<li>
+<p>Realizaremos las peticiones HTTP desde el navegador web de nuestra máquina física/anfitrión hacia el proxy clonado, que nos redirigirá al servidor web original</p>
+</li>
+</ul>
+<p>En primer lugar, debéis cambiar el nombre que tuviera vuestra web por el de webserver, ello implica:</p>
+<ul>
+<li>
+<p>Cambiar el nombre del archivo de configuración de sitios disponibles par Nginx</p>
+</li>
+<li>
+<p>Cambiar el nombre del sitio web dentro de este archivo de configuración donde haga falta</p>
+</li>
+<li>
+<p>En el archivo de configuración del sitio web, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080.</p>
+</li>
+</ul>
+<p><img alt="img1" src="../assets/images/p2.3/img1.png" /></p>
+<ul>
+<li>No os olvidéis de eliminar el link simbólico antiguo con el comando unlink nombre_del_link dentro de la carpeta sites-enabled y crear el nuevo para el nuevo nombre de archivo.</li>
+</ul>
+<p><img alt="img2" src="../assets/images/p2.3/img2.png" /></p>
+<p><img alt="img3" src="../assets/images/p2.3/img3.png" /></p>
+<h2 id="nginx-proxy-inverso">Nginx proxy inverso</h2>
+<p>Ahora, cuando intentamos acceder a http://ejemplo-proxy (o el nombre que tuvieráis de vuestra web de las prácticas anteriores), en realidad estaremos accediendo al proxy, que nos redirigirá a http://webserver:8080, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.</p>
+<p>Para ello:</p>
+<ul>
+<li>
+<p>Crear un archivo de configuración en sites-available con el nombre ejemplo-proxy (o el que tuvieráis vosotros)</p>
+</li>
+<li>
+<p>Este archivo de configuración será más simple, tendrá la siguiente forma</p>
+</li>
+</ul>
+<p><img alt="img4" src="../assets/images/p2.3/img4.png" /></p>
+<h2 id="comprobaciones">Comprobaciones</h2>
+<ul>
+<li>Comprobad  la petición y respuesta con las herramientas de desarrollador de Firefox</li>
+</ul>
+<p><img alt="img5" src="../assets/images/p2.3/img5.png" /></p>
+<h2 id="anadiendo-cabeceras">Añadiendo cabeceras</h2>
+<p>Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque <code>location / { … }</code> debemos añadir la directiva: 
+<code>add_header Host nombre_del_host;</code></p>
+<p><img alt="img6" src="../assets/images/p2.3/img6.png" /></p>
+<p>Comprobamos que podemos acceder al sitio web sin problemas</p>
+<p><img alt="img7" src="../assets/images/p2.3/img7.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -298,10 +498,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
