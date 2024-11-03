@@ -8,23 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://a23momuga.github.io/">
+        <link rel="canonical" href="https://a23momuga.github.io/P2.4/">
+      
+      
+        <link rel="prev" href="../P2.3/">
       
       
       
-        <link rel="next" href="P2.2/">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>Gabriel Moreno</title>
+        <title>Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx - Gabriel Moreno</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-21-instalacion-y-configuracion-de-servidor-web-nginx" class="md-skip">
+        <a href="#practica-24-balanceo-de-carga-con-proxy-inverso-en-nginx" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Gabriel Moreno" class="md-header__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
+    <a href=".." title="Gabriel Moreno" class="md-header__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 2.1 – Instalación y configuración de servidor web Nginx
+              Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
             
           </span>
         </div>
@@ -173,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Gabriel Moreno" class="md-nav__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
+    <a href=".." title="Gabriel Moreno" class="md-nav__button md-logo" aria-label="Gabriel Moreno" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -183,6 +183,66 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.1 – Instalación y configuración de servidor web Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.2 – Autenticación en Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.3 – Proxy inverso con Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
       
       
@@ -204,18 +264,18 @@
           
   
   <span class="md-ellipsis">
-    Práctica 2.1 – Instalación y configuración de servidor web Nginx
+    Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Práctica 2.1 – Instalación y configuración de servidor web Nginx
+    Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
   </span>
   
 
@@ -237,47 +297,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-servidor-web-nginx" class="md-nav__link">
+  <a href="#configuraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalación servidor web Nginx
+      Configuraciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 1
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-las-carpeta-del-sitio-web" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Creación de las carpeta del sitio web
+      Nginx Servidor Web 2
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-de-servidor-web-nginx" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración de servidor web NGINX
+      Nginx Proxy Inverso
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#comprobaciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comprobaciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-servidor-sftp-en-debian" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar servidor SFTP en Debian
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -285,66 +342,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="P2.2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.2 – Autenticación en Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="P2.3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.3 – Proxy inverso con Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="P2.4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -376,47 +373,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-servidor-web-nginx" class="md-nav__link">
+  <a href="#configuraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalación servidor web Nginx
+      Configuraciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 1
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-las-carpeta-del-sitio-web" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Creación de las carpeta del sitio web
+      Nginx Servidor Web 2
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-de-servidor-web-nginx" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración de servidor web NGINX
+      Nginx Proxy Inverso
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#comprobaciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comprobaciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-servidor-sftp-en-debian" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar servidor SFTP en Debian
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -435,49 +429,59 @@
                   
 
 
-<h1 id="practica-21-instalacion-y-configuracion-de-servidor-web-nginx">Práctica 2.1 – Instalación y configuración de servidor web Nginx</h1>
-<h2 id="instalacion-servidor-web-nginx">Instalación servidor web Nginx</h2>
-<p>Para instalar el servidor nginx en nuestra Debian, primero actualizamos los repositorios y después instalamos el paquete correspondiente:</p>
-<p><img alt="img1" src="assets/images/p2.1/img1.png" />
-<img alt="img2" src="assets/images/p2.1/img2.png" /></p>
-<p>Comprobamos que nginx se ha instalado y que está funcionando correctamente:</p>
-<p><img alt="img3" src="assets/images/p2.1/img3.png" /></p>
-<h2 id="creacion-de-las-carpeta-del-sitio-web">Creación de las carpeta del sitio web</h2>
-<p>Todos los archivos que forman parte de un sitio web que servirá nginx se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code></p>
-<p>Así que, vamos a crear la carpeta de nuestro sitio web o dominio:</p>
-<p><img alt="img4" src="assets/images/p2.1/img4.png" /></p>
-<p>Dentro de esa carpeta html, debéis clonar el siguiente repositorio</p>
-<p><img alt="img5" src="assets/images/p2.1/img5.png" /></p>
-<p>Además, haremos que el propietario de esta carpeta y todo lo que haya dentro sea el usuario www-data, típicamente el usuario del servicio web.</p>
-<p><img alt="img6" src="assets/images/p2.1/img6.png" />
-Para comprobar que el servidor está funcionando y sirviendo páginas correctamente, podéis acceder desde vuestro cliente a con la dirección IP de la máquina virtual
-<img alt="img7" src="assets/images/p2.1/img7.png" />
-<img alt="img8" src="assets/images/p2.1/img8.png" /></p>
-<h2 id="configuracion-de-servidor-web-nginx">Configuración de servidor web NGINX</h2>
-<p>En <code>/etc/nginx/sites-available/a23momuga.github.io</code> insertamos el siguiente contenido
-<img alt="img9" src="assets/images/p2.1/img9.png" />
-Y crearemos un archivo simbólico entre este archivo y el de sitios que están habilitados, para que se dé de alta automáticamente.
-<img alt="img10" src="assets/images/p2.1/img10.png" /></p>
-<h2 id="comprobaciones">Comprobaciones</h2>
-<p>Editamos el archivo <code>/etc/hosts</code> de nuestra máquina anfitriona para que asocie la IP de la máquina virtual, a nuestro <code>server_name</code>.
-<img alt="img11" src="assets/images/p2.1/img11.png" /></p>
-<p>Usando el siguiente comando podemos ver cada solicitud a su servidor web se registra en este archivo de registro
-<img alt="img12" src="assets/images/p2.1/img12.png" /></p>
-<h2 id="configurar-servidor-sftp-en-debian">Configurar servidor SFTP en Debian</h2>
-<p>En primer lugar, lo instalaremos desde los repositorios:
-<img alt="img13" src="assets/images/p2.1/img13.png" />
-Ahora vamos a crear una carpeta en nuestro home en Debian:
-<img alt="img14" src="assets/images/p2.1/img14.png" /></p>
-<p>Ahora vamos a crear los certificados de seguridad necesarios para aportar la capa de cifrado a nuestra conexión
-<img alt="img15" src="assets/images/p2.1/img15.png" /></p>
-<p>Y una vez realizados estos pasos, procedemos a realizar la configuración de vsftpd propiamente dicha, buscaremos las siguientes líneas del archivo y las eliminaremos por completo</p>
-<p><img alt="img16" src="assets/images/p2.1/img16.png" /></p>
-<p>Tras ello, añadiremos estas líneas en su lugar
-<img alt="img17" src="assets/images/p2.1/img17.png" /></p>
-<p>Y, tras guardar los cambios, reiniciamos el servicio para que coja la nueva configuración:
-<img alt="img18" src="assets/images/p2.1/img18.png" /></p>
-<p>Y ya podremos usar ftp con el servidor nginx (Puerto 21 para ftp y Puerto 22 para sftp)</p>
-<p><img alt="img19" src="assets/images/p2.1/img19.png" /></p>
+<h1 id="practica-24-balanceo-de-carga-con-proxy-inverso-en-nginx">Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx</h1>
+<p>Vamos a configurar dos servidores web Nginx con dos máquinas Debian, además de reutilizar el proxy inverso Nginx configurado en la práctica anterior. Partiremos por tanto de la configuración de la práctica anterior, añadiendo lo necesario:</p>
+<ul>
+<li>
+<p>Cada servidor web presentará un sitio web específico para esta práctica</p>
+</li>
+<li>
+<p>El webserver2 debe tener la IP asignada de forma fija mediante la configuración DHCP.</p>
+</li>
+<li>
+<p>El proxy inverso que ya teníamos configurado, habrá ahora que configurarlo para que realice el balanceo de carga que deseamos</p>
+</li>
+<li>
+<p>Realizaremos las peticiones HTTP desde el navegador web de nuestra máquina anfitriona.</p>
+</li>
+</ul>
+<p>Haremos las peticiones web desde el navegador al proxy inverso, que las repartirá entre los dos servidores web que tenemos.</p>
+<p>Accederemos a http://balanceo y debemos observar que las peticiones, efectivamente, se van repartiendo entre el servidor 1 y el 2.</p>
+<h3 id="configuraciones">Configuraciones</h3>
+<h4 id="nginx-servidor-web-1">Nginx Servidor Web 1</h4>
+<p>El primer servidor web será el servidor principal que hemos venido utilizando hasta ahora durante el curso, el original, donde tenemos instalado ya el servicio Web.</p>
+<p>Debemos configurar este servidor web para que sirva el siguiente index.html que debéis crear dentro de la carpeta /var/www/webserver1/html:</p>
+<p><img alt="img1" src="../assets/images/p2.4/img1.png" /></p>
+<ul>
+<li>
+<p>El nombre del sitio web que debéis utilizar en los archivos correspondientes (sites-available…) que debéis crear para Nginx es webserver1, así como en sus configuraciones. Fijáos en las configuraciones que hicisteis en prácticas anteriores a modo de referencia.</p>
+</li>
+<li>
+<p>El sitio web debe escuchar en el puerto 8080.</p>
+</li>
+<li>
+<p>Debéis añadir una cabecera que se llame Serv_Web1_vuestronombre.</p>
+</li>
+</ul>
+<p><img alt="img2" src="../assets/images/p2.4/img2.png" /></p>
+<h4 id="nginx-servidor-web-2">Nginx Servidor Web 2</h4>
+<p>Debe ser una máquina Debian, clon del servidor web 1.</p>
+<p>En este servidor web debemos realizar una configuración idéntica al servidor web 1 pero cambiando webserver1 por webserver2 (también en el index.html), así como el nombre de la cabecera añadida, que será Serv_Web2_vuestronombre</p>
+<p><img alt="img3" src="../assets/images/p2.4/img3.png" />
+<img alt="img4" src="../assets/images/p2.4/img4.png" /></p>
+<h4 id="nginx-proxy-inverso">Nginx Proxy Inverso</h4>
+<p>Ya disponemos de los dos servidores web entre los que se van a repartir las peticiones que realice el cliente desde el navegador.</p>
+<p>Vamos, por tanto, a configurar el proxy inverso para que realice este reparto de peticiones:</p>
+<p>En sites-available debéis crear el archivo de configuración con el nombre balanceo
+Este archivo tendrá el siguiente formato:</p>
+<p><img alt="img5" src="../assets/images/p2.4/img5.png" /></p>
+<p>Donde:
+El bloque upstream → son los servidores entre los que se va a repartir la carga, que son los dos que hemos configurado anteriormente.</p>
+<p>Si miráis el diagrama y tenéis en cuenta la configuración que habéis hecho hasta ahora, aquí deberéis colocar la IP de cada servidor, así como el puerto donde está escuchando las peticiones web.</p>
+<p>A este grupo de servidores le ponemos un nombre, que es backend_hosts</p>
+<p>#### Comprobaciones
+<img alt="img6" src="../assets/images/p2.4/img6.png" />
+<img alt="img7" src="../assets/images/p2.4/img7.png" /></p>
 
 
 
@@ -524,10 +528,10 @@ Ahora vamos a crear una carpeta en nuestro home en Debian:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
